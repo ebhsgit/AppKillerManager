@@ -64,6 +64,8 @@ public class Xiaomi extends DeviceAbstract {
             if (ActionsUtils.isIntentAvailable(context, component)) {
                 intent = ActionsUtils.createIntent();
                 intent.setComponent(component);
+                intent.putExtra(MIUI_ACTION_POWER_SAVE_EXTRA_NAME, context.getPackageName());
+                intent.putExtra(MIUI_ACTION_POWER_SAVE_EXTRA_LABEL, context.getText(R.string.app_name));
                 break;
             }
         }
