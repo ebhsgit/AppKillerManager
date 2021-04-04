@@ -134,15 +134,15 @@ public class KillerManager {
         return false;
     }
 
-    public static void doActionAutoStart(Context context) {
-        doAction(context, Actions.ACTION_AUTOSTART);
+    public static boolean doActionAutoStart(Context context) {
+        return doAction(context, Actions.ACTION_AUTOSTART);
     }
 
-    public static void doActionNotification(Context context) {
-        doAction(context, Actions.ACTION_NOTIFICATIONS);
+    public static boolean doActionNotification(Context context) {
+        return doAction(context, Actions.ACTION_NOTIFICATIONS);
     }
 
-    public static void doActionPowerSaving(Context context) {
-        doAction(context, Actions.ACTION_POWERSAVING);
+    public static boolean doActionPowerSaving(Context context) {
+        return doAction(context, Actions.ACTION_POWERSAVING);
     }
 }
