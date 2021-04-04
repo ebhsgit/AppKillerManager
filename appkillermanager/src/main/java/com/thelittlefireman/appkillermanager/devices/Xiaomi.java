@@ -28,7 +28,11 @@ public class Xiaomi extends DeviceAbstract {
 
     private static final ComponentName[] MIUI_AUTO_START = {new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity")};
 
-    private static final ComponentName[] MIUI_POWER_SAVE = {new ComponentName("com.miui.powerkeeper", "com.miui.powerkeeper.ui.HiddenAppsConfigActivity")};
+    private static final ComponentName[] MIUI_POWER_SAVE = {
+            new ComponentName("com.miui.powerkeeper", "com.miui.powerkeeper.ui.HiddenAppsConfigActivity"),
+            new ComponentName("com.miui.securitycenter", "com.miui.permcenter.permissions.PermissionsEditorActivity"),
+            new ComponentName("com.miui.securitycenter", "com.miui.permcenter.permissions.AppPermissionsEditorActivity"),
+    };
 
     @Override
     public boolean isThatRom() {
@@ -66,6 +70,7 @@ public class Xiaomi extends DeviceAbstract {
                 intent.setComponent(component);
                 intent.putExtra(MIUI_ACTION_POWER_SAVE_EXTRA_NAME, context.getPackageName());
                 intent.putExtra(MIUI_ACTION_POWER_SAVE_EXTRA_LABEL, context.getText(R.string.app_name));
+                intent.putExtra(MIUI_ACTION_PERMS_EXTRA, context.getPackageName());
                 break;
             }
         }
