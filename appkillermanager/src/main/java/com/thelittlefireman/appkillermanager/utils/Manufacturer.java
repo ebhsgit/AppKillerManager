@@ -15,6 +15,10 @@ public enum Manufacturer {
 
     private final String name;
 
+    public String getName() {
+        return this.name;
+    }
+    
     Manufacturer(String device){
         name = device;
     }
