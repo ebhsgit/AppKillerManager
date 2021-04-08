@@ -63,9 +63,4 @@ public class Letv extends DeviceAbstract {
     public String getExtraDebugInformations(Context context) {
         return null;
     }
-
-    @Override
-    public int getHelpImagePowerSaving() {
-        return 0;
-    }
 }

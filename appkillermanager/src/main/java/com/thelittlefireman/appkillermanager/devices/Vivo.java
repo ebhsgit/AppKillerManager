@@ -4,9 +4,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
-import android.widget.Toast;
 
-import com.thelittlefireman.appkillermanager.R;
 import com.thelittlefireman.appkillermanager.utils.ActionsUtils;
 import com.thelittlefireman.appkillermanager.utils.Manufacturer;
 
@@ -93,15 +91,6 @@ public class Vivo extends DeviceAbstract {
         return null;
     }
 
-    @Override
-    public int getHelpImagePowerSaving() {
-        return R.drawable.vivo_power_save;
-    }
-
-    @Override
-    public int getHelpImageAutoStart() {
-        return R.drawable.vivo_auto_start;
-    }
 /*
     @Override
     public List<ComponentName> getAutoStartSettings(Context context) {

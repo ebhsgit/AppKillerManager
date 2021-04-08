@@ -65,9 +65,4 @@ public class ZTE extends DeviceAbstract {
         // TODO
         return null;
     }
-
-    @Override
-    public int getHelpImagePowerSaving() {
-        return 0;
-    }
 }
