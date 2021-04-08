@@ -20,24 +20,6 @@ public abstract class DeviceAbstract implements DeviceBase {
     }
 
     @Override
-    @DrawableRes
-    public int getHelpImageAutoStart(){
-        return 0;
-    }
-
-    @Override
-    @DrawableRes
-    public int getHelpImageNotification(){
-        return 0;
-    }
-
-    @DrawableRes
-    @Override
-    public int getHelpImagePowerSaving() {
-        return 0;
-    }
-
-    @Override
     public boolean isActionDozeModeNotNecessary(Context context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);

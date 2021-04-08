@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
-import com.thelittlefireman.appkillermanager.R;
 import com.thelittlefireman.appkillermanager.utils.ActionsUtils;
 import com.thelittlefireman.appkillermanager.utils.Manufacturer;
 
@@ -95,16 +94,6 @@ public class Oppo extends DeviceAbstract {
     @Override
     public String getExtraDebugInformations(Context context) {
         return null;
-    }
-
-    @Override
-    public int getHelpImagePowerSaving() {
-        return 0;
-    }
-
-    @Override
-    public int getHelpImageAutoStart() {
-        return 0;
     }
 
 /*

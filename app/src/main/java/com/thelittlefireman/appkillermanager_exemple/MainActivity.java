@@ -8,7 +8,6 @@ import android.widget.Button;
 import androidx.appcompat.widget.AppCompatCheckBox;
 
 import com.thelittlefireman.appkillermanager.managers.KillerManager;
-import com.thelittlefireman.appkillermanager.ui.DialogKillerManagerBuilder;
 
 public class MainActivity extends Activity {
 
@@ -64,8 +63,6 @@ public class MainActivity extends Activity {
     }
 
     public void startDialog(KillerManager.Actions actions) {
-
-        new DialogKillerManagerBuilder().setContext(this).setAction(actions).show();
-
+        throw new RuntimeException("No longer in this branch. Use original fork.");
     }
 }

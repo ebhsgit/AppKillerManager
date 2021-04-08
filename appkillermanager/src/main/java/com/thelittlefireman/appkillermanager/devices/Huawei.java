@@ -8,9 +8,6 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.util.Log;
 
-import androidx.annotation.DrawableRes;
-
-import com.thelittlefireman.appkillermanager.R;
 import com.thelittlefireman.appkillermanager.utils.ActionsUtils;
 import com.thelittlefireman.appkillermanager.utils.Manufacturer;
 import com.thelittlefireman.appkillermanager.utils.SystemUtils;
@@ -140,16 +137,6 @@ public class Huawei extends DeviceAbstract {
         stringBuilder.append(HUAWEI_SYSTEMMANAGER_PACKAGE_NAME + HUAWEI_SYSTEMMANAGER_AUTO_START_V3).append(ActionsUtils.isIntentAvailable(context, new ComponentName(HUAWEI_SYSTEMMANAGER_PACKAGE_NAME, HUAWEI_SYSTEMMANAGER_AUTO_START_V3)));
         stringBuilder.append(HUAWEI_SYSTEMMANAGER_PACKAGE_NAME + HUAWEI_SYSTEMMANAGER_AUTO_START_V4).append(ActionsUtils.isIntentAvailable(context, new ComponentName(HUAWEI_SYSTEMMANAGER_PACKAGE_NAME, HUAWEI_SYSTEMMANAGER_AUTO_START_V4)));
         return stringBuilder.toString();
-    }
-
-    @Override
-    public int getHelpImagePowerSaving() {
-        return R.drawable.huawei_powersaving;
-    }
-
-    @Override
-    public int getHelpImageAutoStart() {
-        return R.drawable.huawei_autostart;
     }
 
     @SuppressWarnings("unused")
