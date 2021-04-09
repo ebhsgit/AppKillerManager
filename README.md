@@ -45,8 +45,14 @@ Android Custom Roms made sometimes your apps unfunctional due to :
 ##### Add it on your Android app
 
 ```groovy
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
 dependencies {
-    implementation 'com.thelittlefireman:AppKillerManager:2.1.1'
+    implementation("com.github.ebhsgit:AppKillerManager:mod-210409-1029@aar") {
+        transitive = true
+    }
 }
 ```
 
