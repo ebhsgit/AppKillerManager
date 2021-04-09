@@ -102,6 +102,10 @@ Notification permission Settings | N/A | N/A | N/A | N/A |
   - Add custom image for each device and each languages
 ## DEBUG/HELPING INFORMATIONS :
 
+###Jitpack url :
+
+https://jitpack.io/#ebhsgit/AppKillerManager
+
 ###Get the current activity name :
 
 ```shell
