@@ -24,14 +24,22 @@ public class Oppo extends DeviceAbstract {
     private static final String p13c1 = "com.color.safecenter.permission.startup.StartupAppListActivity";
     private static final String p13c2 = "com.color.safecenter.startupapp.StartupAppListActivity";
 
-    private static final ComponentName[] OPPO_AUTOSTART = {new ComponentName("com.coloros.safecenter", "com.coloros.safecenter.permission.startup.StartupAppListActivity"),
-            new ComponentName("com.coloros.safecenter", "com.coloros.safecenter.startupapp.StartupAppListActivity"),
-            new ComponentName("com.oppo.safe", "com.oppo.safe.permission.startup.StartupAppListActivity"),
-            new ComponentName("com.color.safecenter", "com.color.safecenter.permission.startup.StartupAppListActivity"),
-            new ComponentName("com.color.safecenter", "com.color.safecenter.startupapp.StartupAppListActivity")};
+    private static final String ColorOs_Package_SafeCenter = "com.coloros.safecenter";
+    private static final String ColorOs_Package_OppoGuard = "com.color.oppoguardelfr";
+    private static final String Oppo_Package_SafeCenter = "com.oppo.safe";
 
-    private static final ComponentName[] OPPO_POWER_SAVE = {new ComponentName("com.color.oppoguardelfr", "com.coloros.powermanager.fuelgaue.PowerConsumptionActivity"),
-            new ComponentName("com.color.oppoguardelf", "com.coloros.powermanager.fuelgaue.PowerUsageModelActivity")};
+    private static final ComponentName[] OPPO_AUTOSTART = {
+            new ComponentName(ColorOs_Package_SafeCenter, "com.coloros.safecenter.permission.startup.StartupAppListActivity"),
+            new ComponentName(ColorOs_Package_SafeCenter, "com.coloros.safecenter.startupapp.StartupAppListActivity"),
+            new ComponentName(Oppo_Package_SafeCenter, "com.oppo.safe.permission.startup.StartupAppListActivity"),
+            new ComponentName(ColorOs_Package_SafeCenter, "com.color.safecenter.permission.startup.StartupAppListActivity"),
+            new ComponentName(ColorOs_Package_SafeCenter, "com.color.safecenter.startupapp.StartupAppListActivity")
+    };
+
+    private static final ComponentName[] OPPO_POWER_SAVE = {
+            new ComponentName(ColorOs_Package_OppoGuard, "com.coloros.powermanager.fuelgaue.PowerConsumptionActivity"),
+            new ComponentName(ColorOs_Package_OppoGuard, "com.coloros.powermanager.fuelgaue.PowerUsageModelActivity")
+    };
 
     @Override
     public boolean isThatRom() {

@@ -15,23 +15,29 @@ public class Xiaomi extends DeviceAbstract {
 
     // TODO TEST new Intent().setComponent(ComponentName("com.miui.securitycenter", "com.miui.powercenter.PowerSettings"))
     private static final String MIUI_ACTION_PERMS = "miui.intent.action.APP_PERM_EDITOR";
-    private static final String MIUI_ACTION_PERMS_EXTRA = "extra_pkgname";
 
     // ONE SPECIFIQUE APP
     private static final String[] MIUI_ACTION_AUTOSTART = {"com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity"};
     private static final String[] MIUI_ACTION_POWERSAVE = {"com.miui.powerkeeper", "com.miui.powerkeeper.ui.HiddenAppsConfigActivity"};
     // OPEN DEFAULT LIST BATTERYSAVER
     private static final String MIUI_ACTION_POWER_SAVE_LIST = "miui.intent.action.POWER_HIDE_MODE_APP_LIST";
-    private static final String MIUI_ACTION_POWER_SAVE_EXTRA_NAME = "package_name";
-    private static final String MIUI_ACTION_POWER_SAVE_EXTRA_LABEL = "package_label";
     //private static final String MIUI_ACTION_AUTOSTART = "miui.intent.action.OP_AUTO_START";
 
-    private static final ComponentName[] MIUI_AUTO_START = {new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity")};
+    private static final String POWER_SAVE_IntentExtra_NAME = "package_name";
+    private static final String POWER_SAVE_IntentExtra_LABEL = "package_label";
+    private static final String PERMS_IntentExtra_Pkg = "extra_pkgname";
+
+    private static final String Miui_Package_SecurityCenter = "com.miui.securitycenter";
+    private static final String Miui_Package_PowerKeeper = "com.miui.powerkeeper";
+
+    private static final ComponentName[] MIUI_AUTO_START = {
+            new ComponentName(Miui_Package_SecurityCenter, "com.miui.permcenter.autostart.AutoStartManagementActivity")
+    };
 
     private static final ComponentName[] MIUI_POWER_SAVE = {
-            new ComponentName("com.miui.powerkeeper", "com.miui.powerkeeper.ui.HiddenAppsConfigActivity"),
-            new ComponentName("com.miui.securitycenter", "com.miui.permcenter.permissions.PermissionsEditorActivity"),
-            new ComponentName("com.miui.securitycenter", "com.miui.permcenter.permissions.AppPermissionsEditorActivity"),
+            new ComponentName(Miui_Package_PowerKeeper, "com.miui.powerkeeper.ui.HiddenAppsConfigActivity"),
+            new ComponentName(Miui_Package_SecurityCenter, "com.miui.permcenter.permissions.PermissionsEditorActivity"),
+            new ComponentName(Miui_Package_SecurityCenter, "com.miui.permcenter.permissions.AppPermissionsEditorActivity"),
     };
 
     @Override
@@ -68,9 +74,9 @@ public class Xiaomi extends DeviceAbstract {
             if (ActionsUtils.isIntentAvailable(context, component)) {
                 intent = ActionsUtils.createIntent();
                 intent.setComponent(component);
-                intent.putExtra(MIUI_ACTION_POWER_SAVE_EXTRA_NAME, context.getPackageName());
-                intent.putExtra(MIUI_ACTION_POWER_SAVE_EXTRA_LABEL, context.getText(R.string.app_name));
-                intent.putExtra(MIUI_ACTION_PERMS_EXTRA, context.getPackageName());
+                intent.putExtra(POWER_SAVE_IntentExtra_NAME, context.getPackageName());
+                intent.putExtra(POWER_SAVE_IntentExtra_LABEL, context.getText(R.string.app_name));
+                intent.putExtra(PERMS_IntentExtra_Pkg, context.getPackageName());
                 break;
             }
         }

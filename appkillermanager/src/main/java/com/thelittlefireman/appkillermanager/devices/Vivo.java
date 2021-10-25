@@ -20,11 +20,19 @@ public class Vivo extends DeviceAbstract {
     private final String p2 = "com.vivo.permissionmanager";
     private final String p2c1 = "com.vivo.permissionmanager.activity.BgStartUpManagerActivity";
 
-    private static final ComponentName[] VIVO_AUTOSTART = {new ComponentName("com.iqoo.secure", "com.iqoo.secure.ui.phoneoptimize.AddWhiteListActivity"),
-            new ComponentName("com.iqoo.secure", "com.iqoo.secure.ui.phoneoptimize.BgStartUpManager"),
-            new ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity")};
+    private static final String Igoo_Package_Secure = "com.iqoo.secure";
+    private static final String Vivo_Package_PermissionManager = "com.vivo.permissionmanager";
+    private static final String Vivo_Package_ABE = "com.vivo.abe";
 
-    private static final ComponentName[] VIVO_POWER_SAVE = {new ComponentName("com.vivo.abe", "com.vivo.applicationbehaviorengine.ui.ExcessivePowerManagerActivity")};
+    private static final ComponentName[] VIVO_AUTOSTART = {
+            new ComponentName(Igoo_Package_Secure, "com.iqoo.secure.ui.phoneoptimize.AddWhiteListActivity"),
+            new ComponentName(Igoo_Package_Secure, "com.iqoo.secure.ui.phoneoptimize.BgStartUpManager"),
+            new ComponentName(Vivo_Package_PermissionManager, "com.vivo.permissionmanager.activity.BgStartUpManagerActivity")
+    };
+
+    private static final ComponentName[] VIVO_POWER_SAVE = {
+            new ComponentName(Vivo_Package_ABE, "com.vivo.applicationbehaviorengine.ui.ExcessivePowerManagerActivity")
+    };
 
     // "com.vivo.abe", "com.vivo.applicationbehaviorengine.ui.ExcessivePowerManagerActivity"
     //com.iqoo.secure.MainGuideActivity ??

@@ -10,12 +10,17 @@ import com.thelittlefireman.appkillermanager.utils.Manufacturer;
 import com.thelittlefireman.appkillermanager.utils.SystemUtils;
 
 public class OnePlus extends DeviceAbstract {
+    private static final String SECURITY_PACKAGE_NAME = "com.oneplus.security";
 
-    private static final ComponentName[] ONEPLUS_AUTO_START = {new ComponentName("com.oneplus.security", "com.oneplus.security.chainlaunch.view.ChainLaunchAppListActivity"),
-            new ComponentName("com.oneplus.security", "com.oneplus.security.autorun.AutorunMainActivity")};
+    private static final ComponentName[] ONEPLUS_AUTO_START = {
+            new ComponentName(SECURITY_PACKAGE_NAME, "com.oneplus.security.chainlaunch.view.ChainLaunchAppListActivity"),
+            new ComponentName(SECURITY_PACKAGE_NAME, "com.oneplus.security.autorun.AutorunMainActivity")
+    };
 
-    private static final ComponentName[] ONEPLUS_POWER_SAVE = {new ComponentName("com.oneplus.security", "com.oneplus.security.highpowerapp.view.HighPowerAppActivity"),
-            new ComponentName("com.oneplus.security", "com.oneplus.security.cleanbackground.view.ManageBackgroundAppListActivity")};
+    private static final ComponentName[] ONEPLUS_POWER_SAVE = {
+            new ComponentName(SECURITY_PACKAGE_NAME, "com.oneplus.security.highpowerapp.view.HighPowerAppActivity"),
+            new ComponentName(SECURITY_PACKAGE_NAME, "com.oneplus.security.cleanbackground.view.ManageBackgroundAppListActivity")
+    };
 
     @Override
     public boolean isThatRom() {
@@ -26,7 +31,7 @@ public class OnePlus extends DeviceAbstract {
 
     // This is mandatory for new oneplus version android 8
     @Override
-    public boolean needToUseAlongwithActionDoseMode(){
+    public boolean needToUseAlongwithActionDoseMode() {
         return true;
     }
 
